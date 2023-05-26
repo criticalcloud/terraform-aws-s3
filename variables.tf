@@ -19,11 +19,6 @@ variable versioning {
   default     = true
 }
 
-variable acl {
-  type        = string
-  default     = "private"
-}
-
 variable policy_enabled {
   type        = bool
   default     = false

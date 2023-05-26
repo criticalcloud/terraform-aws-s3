@@ -28,11 +28,6 @@ resource "aws_s3_bucket_versioning" "s3_versioning" {
   }
 }
 
-resource "aws_s3_bucket_acl" "s3_acl" {
-  bucket = aws_s3_bucket.b.id
-  acl    = var.acl
-}
-
 resource "aws_s3_bucket_policy" "cloudfront_bucket_policy" {
   count  = var.policy_enabled == true ? 1 : 0 
   bucket = aws_s3_bucket.b.id
